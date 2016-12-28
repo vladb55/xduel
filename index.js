@@ -138,6 +138,6 @@ app.post('/api/users/win', function(request, response) {
     });
 });
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log('App was launched');
 });
