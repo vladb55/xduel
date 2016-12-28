@@ -1,4 +1,4 @@
-var express = require('express');
+﻿var express = require('express');
 
 var crypto = require('crypto');
 
@@ -138,6 +138,6 @@ app.post('/api/users/win', function(request, response) {
     });
 });
 
-app.listen(3333, function() {
+app.listen(3000, function() {
     console.log('App was launched');
 });
