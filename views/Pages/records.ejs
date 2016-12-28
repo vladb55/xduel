@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Records</title>
+    <link rel="stylesheet" href="/css/recordsstyle.css" type='text/css'>
+</head>
+<body>
+
+    <% players.sort(function (a, b) {%>
+    <% if (a.singlerating < b.singlerating) {%>
+    <% return 1;%>
+    <% } %>
+    <% if (a.singlerating > b.singlerating) {%>
+    <% return -1;%>
+    <% } %>
+    <% return 0;%>
+    <% }); %>
+
+    <h1>RECORDS</h1>
+
+    <div class="list">
+        <ul>
+        <% for(var i = 0; i < players.length; i++) {%>
+            <li><%= players[i].login + " " + players[i].singlerating%></li>
+        <% } %>
+        </ul>
+    </div>
+</body>
+</html>
